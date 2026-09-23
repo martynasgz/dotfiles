@@ -1,0 +1,32 @@
+# dotfiles
+
+Managed with [GNU Stow](https://www.gnu.org/software/stow/). Each folder is a package that mirrors `$HOME`.
+
+## New Mac
+
+```bash
+git clone https://github.com/martynasgz/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+brew bundle install --file=Brewfile
+stow zsh git rift zsh-macos
+exec zsh
+```
+
+## Adding a config
+
+```bash
+mkdir -p ~/.dotfiles/app/.config/app
+mv ~/.config/app/config.toml ~/.dotfiles/app/.config/app/
+cd ~/.dotfiles && stow -nv app && stow app
+```
+
+## Commands
+
+- `stow <pkg>` / `stow -D <pkg>` / `stow -R <pkg>`: link / unlink / relink
+- `brew bundle check`: verify Brewfile is installed
+- `brew bundle cleanup`: show packages not in Brewfile
+
+## Notes
+
+- `.stowrc` sets `--no-folding` and ignores `.DS_Store`
+- `Brewfile` updates automatically on `brew install`/`uninstall` (see `zsh-macos`)
