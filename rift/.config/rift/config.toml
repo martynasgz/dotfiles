@@ -1,7 +1,7 @@
 [settings]
 animate = true
-animation_duration = 0.3
-animation_fps = 100.0
+animation_duration = 0.2
+animation_fps = 60.0
 default_disable = false
 # doesn't work?
 hot_reload = true
@@ -12,18 +12,18 @@ super = "Alt + Shift"
 
 [keys]
 "regular + Z" = "toggle_space_activated"
-"regular + ;" = { move_focus = "left" }
-"regular + /" = { move_focus = "down" }
-"regular + [" = { move_focus = "up" }
-"regular + '" = { move_focus = "right" }
-"super + ;" = { move_node = "left" }
-"super + /" = { move_node = "down" }
-"super + [" = { move_node = "up" }
-"super + '" = { move_node = "right" }
+"regular + Left" = { move_focus = "left" }
+"regular + Down" = { move_focus = "down" }
+"regular + Up" = { move_focus = "up" }
+"regular + Right" = { move_focus = "right" }
+"super + Left" = { move_node = "left" }
+"super + Down" = { move_node = "down" }
+"super + Up" = { move_node = "up" }
+"super + Right" = { move_node = "right" }
 "super + Space" = "toggle_window_floating"
 
 [settings.layout]
-mode = "master_stack"
+mode = "bsp"
 
 [settings.ui.menu_bar]
 enabled = true
